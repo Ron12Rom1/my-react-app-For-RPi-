@@ -40,7 +40,7 @@ function App() {
           <p>Nice😏</p>
         </div>
       </div>
-      <div id="unsupported-message" style={{ display: '' }}>
+      <div id="unsupported-message">
         <p>Sorry, this website cannot be displayed on small screens.</p>
       </div>
     </>
