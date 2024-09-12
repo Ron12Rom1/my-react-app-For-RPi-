@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import './App.css'
+
+import React, { useState, useEffect } from 'react';
+import './App.css';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -12,21 +13,37 @@ function App() {
     setCount(count - 1);
   };
 
+  useEffect(() => {
+    const checkbox = document.getElementById('myCheckbox');
+    if (count === 3) {
+      checkbox.classList.add('active');
+      checkbox.checked = true; // Check the checkbox
+    } else {
+      checkbox.classList.remove('active');
+      checkbox.checked = false; // Uncheck the checkbox
+    }
+  }, [count]);
+
   return (
-    <div id='counter'>
-      <h1>Counter: {count}</h1>
-      <div className='counter-btn'>
-        <button class="btns" onClick={handleIncrement}>Increment</button>
-        <button class="btns" onClick={handleDecrement}>Decrement</button>
-      </div>
-      <button class="btns" id="resetBTN" onClick={() => setCount(0)}>Reset</button>
-      {count === 20 && (
-        <div>
-          <h2>You reached 20! 🎉</h2>
-          {/* Add more elements or logic here for when count reaches 20 */}
+    <>
+      <div id="main-content"> {/* Add a container for the main content */}
+        <div id="counter">
+        <h1 id="counterLabel">Counter: {count}</h1>
+        <div className='counter-btns'>
+          <button class="btns" onClick={handleIncrement}>Increment</button>
+          <button class="btns" onClick={handleDecrement}>Decrement</button>
         </div>
-      )}
-    </div>
+        <button class="btns" id="resetBTN" onClick={() => setCount(0)}>Reset</button>
+      </div>
+        <input type="checkbox" id="myCheckbox" style={{ display: 'none' }} />
+        <div id="whenNum">
+          <p>Nice😏</p>
+        </div>
+      </div>
+      <div id="unsupported-message" style={{ display: '' }}>
+        <p>Sorry, this website cannot be displayed on small screens.</p>
+      </div>
+    </>
   );
 }
 
