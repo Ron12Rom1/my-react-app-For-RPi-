@@ -144,3 +144,11 @@ button {
     /* Fade out at the end */
   }
 }
+@keyframes BG_img_fadein{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
