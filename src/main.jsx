@@ -1,12 +1,16 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.jsx'
-import './main.css'
+// Suggested code may be subject to a license. Learn more: ~LicenseLog:3187763402.
+// Suggested code may be subject to a license. Learn more: ~LicenseLog:3358136934.
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { createRoot } from 'react-dom/client';
+import App from './App.jsx';
+import './main.css';
 
-createRoot(document.getElementById('root')).render(
-    <StrictMode>
-
-        <App id="App"/>
-       
-    </StrictMode>
-)
+const root = createRoot(document.getElementById('root'));
+root.render(
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={"Hello"} />
+      <Route path="/counter" element={<App />} />
+    </Routes>
+    </BrowserRouter> 
+);
