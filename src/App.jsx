@@ -22,7 +22,7 @@ function App() {
   useEffect(() => {
     const checkbox = document.
 getElementById('myCheckbox');
-    if (count === 3) or (count in (1, 2)); {
+    if ([3, 21, -14, -2].includes(count)) {
       checkbox.classList.add('active');
       checkbox.checked = true; 
       // Create confetti
