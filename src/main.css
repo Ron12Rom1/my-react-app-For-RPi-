@@ -1,5 +1,6 @@
-body#App {
-
+body {
+    displey: flex;
+    margin: 0;
 }
 /* 
 #App{

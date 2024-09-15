@@ -6,12 +6,23 @@ import App from './assets/pages/App.jsx';
 import HomePage from './HomePage.jsx';
 import './main.css';
 
+function corn(){
+  return(
+    <div>
+      <h1>corn</h1>
+      <img src="https://c8.alamy.com/comp/REMDY4/black-and-yellow-maize-REMDY4.jpg" alt="Big Black corn" 
+      style={{height: '400px'}}/>
+    </div>
+  )
+}
+
 const root = createRoot(document.getElementById('root'));
 root.render(
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/counter" element={<App />} />
+      <Route path="/corn" element={corn()} />
     </Routes>
     </BrowserRouter> 
 );
