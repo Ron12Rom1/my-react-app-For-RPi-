@@ -10,7 +10,7 @@ function corn(){
   return(
     <div>
       <audio autoPlay> 
-        <source src="src/assets/y2mate.com - Caravan Palace  Lone Digger Official MV (1).mp3" type="audio/mpeg" />
+        <source src="src\assets\y2mate.com - Pornhub Intro  GTA San Andreas Theme Download.mp3" type="audio/mpeg" />
       </audio>
       <h1>corn</h1>
       <img src="https://c8.alamy.com/comp/REMDY4/black-and-yellow-maize-REMDY4.jpg" alt="Big Black corn" 
